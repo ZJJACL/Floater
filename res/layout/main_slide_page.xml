@@ -197,7 +197,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="25dp"
-            android:layout_marginLeft="215dp"
+            android:layout_marginLeft="214dp"
             android:text="消息"
             android:textColor="#333333"
             android:textSize="10dp"
