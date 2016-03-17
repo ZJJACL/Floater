@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <ImageView
+        android:id="@+id/commment_user_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"/>
+    
+    <TextView
+        android:id="@+id/comment_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#2fb9c3"
+        android:textSize="14sp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/comment_user_university"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/comment_user_name"
+        android:layout_below="@+id/comment_user_name"
+        android:layout_marginTop="4dp"
+        android:textColor="#828282"
+        android:textSize="11sp"
+        android:typeface="sans" />
+    
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/comment_user_name"
+        android:layout_below="@+id/comment_user_university"
+        android:layout_marginTop="10dp"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:typeface="sans" />
+    
+    <TextView
+        android:id="@+id/comment_post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#828282"
+        android:textSize="11sp"
+        android:typeface="sans" />
+    
+    <!-- 模拟的分割线 -->
+    <TextView
+        android:id="@+id/comment_separation"
+        android:layout_width="288dp"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/comment_user_name"
+        android:layout_below="@+id/comment_content"
+        android:layout_marginTop="13dp"
+        android:background="#e6e6e6"/>
+
+</RelativeLayout>

@@ -5,6 +5,19 @@
     android:background="#e6e6e6" 
     android:fitsSystemWindows="true">
     
+    
+   	<!-- 我关注的话题列表 -->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/comment_list_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/comment_edittext_frame_layout"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:overScrollMode="never"
+        android:scrollbars="vertical" />
+    
 	<!-- 创建标题栏 -->
     <RelativeLayout
         android:id="@+id/card_detail_page_title_bar"
@@ -39,7 +52,7 @@
     <!-- 创建底部评论输入框 -->
 
     <RelativeLayout
-        android:id="@+id/relativeLayout1"
+        android:id="@+id/comment_edittext_frame_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -77,20 +90,5 @@
         android:textColor="#333333"
         android:textSize="17sp"
         android:typeface="sans" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="216dp"
-        android:text="中国好声音"
-        android:textColor="#333333"
-        android:textSize="17sp" />
-    
-    </ScrollView>
 
 </RelativeLayout>
