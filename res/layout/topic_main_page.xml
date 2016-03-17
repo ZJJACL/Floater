@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#e6e6e6"
+    android:fitsSystemWindows="true">
+    
+    <!-- 话题主页中的卡片列表 -->
+    <android.support.v7.widget.RecyclerView
+		android:id="@+id/topic_main_page_cards_recyclerview"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop = "true"
+		android:layout_marginTop ="48dp" 
+		android:overScrollMode="never" 
+		android:scrollbars="vertical"/> 
+    
+    <!-- 创建顶部的卡片筛选条 -->
+    <com.lee.floater.support.FloatingRelativeLayout
+        android:id="@+id/topic_main_page_filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+		android:layout_alignParentTop = "true"
+		android:layout_marginTop ="47dp" 
+        android:background="@drawable/nav_title_frame_background" >
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+            
+            <TextView
+            android:id="@+id/topic_main_page_filter_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="鲁迅美术学院"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:typeface="sans" />
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf ="@id/topic_main_page_filter_text"
+                android:layout_marginLeft ="4dp"
+                android:src="@drawable/topic_main_page_filter_picker" />
+        
+    	</RelativeLayout>
+    	
+    </com.lee.floater.support.FloatingRelativeLayout>
+    
+    <!-- 创建标题栏 -->
+    <RelativeLayout
+        android:id="@+id/topic_main_page_title_bar"
+        android:layout_width="match_parent" 
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nav_title_frame_background" >
+
+        <ImageView
+            android:id="@+id/topic_main_page_back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/title_bar_back" />
+
+        <TextView
+            android:id="@+id/topic_main_page_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/topic_main_page_back_icon"
+            android:text="还记得你们约定的纪念日吗"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:typeface="sans" />
+
+        <ImageView
+            android:id="@+id/title_bar_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/title_bar_menu" />
+        
+        <ImageView
+            android:id="@+id/title_bar_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="55dp"
+            android:src="@drawable/audio" />
+        
+    </RelativeLayout>
+    
+    <!-- 创建卡片发布按钮 -->
+    <com.lee.floater.support.FloatingButton
+        android:id="@+id/post_card_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/post_card_button" 
+        />
+
+</RelativeLayout>

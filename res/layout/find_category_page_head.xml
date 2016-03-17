@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 构建顶部的静态搜索框 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    
+    <!-- 构建顶部的静态搜索框 -->
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" >
+
+        <ImageView
+            android:layout_width="344dp"
+            android:layout_height="36dp"
+            android:background="@drawable/search_background" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:src="@drawable/search_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@+id/search_icon"
+            android:text="点此搜索话题"
+            android:textColor="#848484"
+            android:textSize="14sp"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+    <!-- 将四个分类按钮封装到一个RelativeLayout中 -->
+
+    <RelativeLayout
+        android:id="@+id/category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/search_layout"
+        android:layout_marginTop="33dp" >
+
+        <ImageView
+            android:id="@+id/topic_category_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft ="20dp"
+            android:src="@drawable/topic_category_picture" />
+        
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/topic_category_picture"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginLeft ="40dp"
+	        android:text="图文"
+	        android:textColor="#676767"
+	        android:textSize="14sp"
+	        android:typeface="sans" />
+
+        <ImageView
+            android:id="@+id/topic_category_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/topic_category_picture"
+            android:src="@drawable/topic_category_audio" />
+        
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/topic_category_audio"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginLeft ="124dp"
+	        android:text="录音"
+	        android:textColor="#676767"
+	        android:textSize="14sp"
+	        android:typeface="sans" />
+
+        <ImageView
+            android:id="@+id/topic_category_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/topic_category_audio"
+            android:src="@drawable/topic_category_video" />
+        
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/topic_category_audio"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginLeft ="207dp"
+	        android:text="视频"
+	        android:textColor="#676767"
+	        android:textSize="14sp"
+	        android:typeface="sans" />
+
+        <ImageView
+            android:id="@+id/topic_category_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/topic_category_video"
+            android:src="@drawable/topic_category_music" />
+        
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/topic_category_audio"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginLeft ="291dp"
+	        android:text="音乐"
+	        android:textColor="#676767"
+	        android:textSize="14sp"
+	        android:typeface="sans" />
+        
+    </RelativeLayout>
+    
+    <!-- 创建全部话题的标识栏 -->
+
+    <RelativeLayout
+        android:id="@+id/total_topic_sign_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/category_layout"
+        android:layout_marginTop="35dp"
+        android:background="#81708d" 
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/total_topic_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="全部话题（32692）"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+        <ImageView
+            android:id="@+id/sign_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22dp"
+            android:src="@drawable/sign_update" />
+        
+        <ImageView
+            android:id="@+id/sign_update_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22dp"
+            android:src="@drawable/sign_update_notice" />
+
+        <ImageView
+            android:id="@+id/sign_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="35dp"
+            android:layout_toLeftOf="@+id/sign_update"
+            android:src="@drawable/sign_hot" />
+        
+        <ImageView
+            android:id="@+id/sign_hot_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="35dp"
+            android:layout_toLeftOf="@+id/sign_update"
+            android:src="@drawable/sign_hot_notice" />
+
+        <ImageView
+            android:id="@+id/sign_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="35dp"
+            android:layout_toLeftOf="@+id/sign_hot"
+            android:src="@drawable/sign_new" />
+        
+        <ImageView
+            android:id="@+id/sign_new_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="35dp"
+            android:layout_toLeftOf="@+id/sign_hot"
+            android:src="@drawable/sign_new_notice" />
+        
+        <!-- 为三个筛选覆盖热区 -->
+
+        <Button
+            android:id="@+id/button_sign_update"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#00000000" />
+
+        <Button
+            android:id="@+id/button_sign_hot"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/button_sign_update"
+            android:background="#00000000" />
+        
+        <Button
+            android:id="@+id/button_sign_new"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/button_sign_hot"
+            android:background="#00000000" />
+
+    </RelativeLayout>
+    
+
+</RelativeLayout>

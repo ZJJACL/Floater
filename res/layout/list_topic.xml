@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"  >
+
+    <ImageView
+        android:id="@+id/list_topic_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="23dp"/>
+
+    <TextView
+        android:id="@+id/list_topic_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/list_topic_icon"
+        android:textColor="#333333"
+        android:textSize="17sp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/list_topic_content_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/list_topic_title"
+        android:layout_below="@+id/list_topic_title"
+         android:layout_marginTop="4dp"
+        android:textColor="#828282"
+        android:textSize="10sp"
+        android:typeface="sans" />
+    
+    <ImageView
+        android:id="@+id/list_topic_category_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"/>
+    
+    <TextView 
+        android:id="@+id/list_topic_update_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="315dp"
+        android:layout_centerVertical="true"
+        android:textColor="#2fb9c3"
+        android:textSize="17sp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/list_topic_separation"
+        android:layout_width="260dp"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/list_topic_content_number"
+        android:layout_alignParentBottom="true"
+        android:background="#e6e6e6" />
+
+</RelativeLayout>

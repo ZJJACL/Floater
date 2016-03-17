@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:custom="http://schemas.android.com/apk/res/com.lee.floater"
+   	  xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" >
+
+      <!-- 添加刷新控件 -->
+    <android.support.v4.widget.SwipeRefreshLayout  
+	    xmlns:android="http://schemas.android.com/apk/res/android"  
+	    xmlns:tools="http://schemas.android.com/tools"  
+	    android:id="@+id/refresh_bar_for_recommend_page"  
+	    android:layout_width="match_parent"  
+	    android:layout_height="match_parent" >
+	    
+             <!-- 我关注的话题列表 -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_follow_topic_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" 
+                android:scrollbars="vertical"/>
+            
+     </android.support.v4.widget.SwipeRefreshLayout>
+     
+    <RelativeLayout 
+      android:id="@+id/loading_start_for_recommend_page"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" 
+      android:background="#ffffff">
+
+	     <TextView
+	         android:id="@+id/loading_text"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_alignParentLeft="true"
+	         android:layout_alignParentTop="true"
+	         android:layout_marginLeft="157dp"
+	         android:layout_marginTop="144dp"
+	         android:text="努力加载中..."
+	         android:textColor="#333333"
+	         android:textSize="14sp"
+	         android:typeface="sans" />
+	     
+	     <com.lee.floater.support.GifMovieView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_marginTop="132dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="116dp"
+	        custom:gif="@drawable/loading_shoe" />
+    
+    </RelativeLayout>
+
+</RelativeLayout>
+

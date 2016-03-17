@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:layout_marginTop="7dp"
+    android:layout_marginLeft="7dp"
+    android:layout_marginRight="7dp">
+    
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="2dp">
+        
+     	<RelativeLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content" >
+        
+		        <!-- 创建卡片顶部的用户头像、姓名、学校、发布时间 -->
+		        <RelativeLayout
+		            android:id="@+id/card_top_title"
+		    		android:layout_width="match_parent"
+		    		android:layout_height="54dp" >
+		            
+				    <ImageView
+		                android:id="@+id/card_user_icon"
+		                android:layout_width="40dp"
+		                android:layout_height="40dp"
+		                android:layout_alignParentLeft="true"
+		                android:layout_centerVertical="true"
+		                android:layout_marginLeft="16dp"/>
+		            
+		            <TextView
+			            android:id="@+id/card_user_name"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentLeft="true"
+			            android:layout_alignParentBottom="true"
+			            android:layout_marginBottom="28dp"
+			            android:layout_marginLeft="72dp"
+			            android:textColor="#2fb9c3"
+			            android:textSize="14sp"
+			            android:typeface="sans" />
+		
+		            <TextView
+		                android:id="@+id/card_user_university"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignLeft="@+id/card_user_name"
+		                android:layout_alignParentBottom="true"
+			            android:layout_marginBottom="10dp"
+		                android:textColor="#828282"
+		                android:textSize="11sp"
+		                android:typeface="sans" />
+		            
+		            <TextView
+		                android:id="@+id/card_post_time"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true"
+			            android:layout_alignParentBottom="true"
+			            android:layout_marginBottom="28dp"
+			            android:layout_marginRight="16dp"
+		                android:textColor="#828282"
+		                android:textSize="11sp"
+		                android:typeface="sans" />
+		            
+		            
+		        </RelativeLayout>
+		        
+		      	<!-- 创建卡片中的主要内容包括图片（音频条、视频）和文字部分-->
+
+		        <RelativeLayout
+		            android:id="@+id/card_content"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@id/card_top_title">
+
+		           <ImageView
+		                android:id="@+id/card_imgtext_picture"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:scaleType="centerCrop"/>
+		            
+		            <TextView
+		                android:id="@+id/card_text_content"
+		                android:layout_width="308dp"
+		                android:layout_height="wrap_content"
+		                android:layout_below="@id/card_imgtext_picture"
+		                android:layout_centerHorizontal="true"
+		                android:layout_marginTop="8dp"
+		                android:lineSpacingExtra="4dp"
+		                android:textColor="#333333"
+		                android:textSize="16sp"
+		                android:typeface="sans" /> 
+		            
+		            <TextView
+		                android:id="@+id/card_first_author"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_below="@id/card_text_content"
+		                android:layout_marginTop="8dp"
+		                android:layout_alignLeft ="@id/card_text_content"
+		                android:textColor="#2fb9c3"
+		                android:textSize="14sp"
+		                android:typeface="sans" />
+		            
+		            <TextView
+		                android:id="@+id/card_from_topic"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_below="@id/card_first_author"
+		                android:layout_marginTop="8dp"
+		                android:layout_alignLeft ="@id/card_text_content"
+		                android:textColor="#2fb9c3"
+		                android:textSize="14sp"
+		                android:typeface="sans" />
+		            
+		        </RelativeLayout>
+		        
+		        <!-- 卡片底部的四个操作项：聊天、评论、转发和赞 -->
+		        
+		        <RelativeLayout
+		            android:id="@+id/card_bottom_oprate"
+		            android:layout_width="match_parent"
+		            android:layout_height="50dp"
+		            android:layout_below="@id/card_content"
+			        android:layout_marginTop="14dp">
+		            
+		            <!-- 使用TextView仿造底部的分割线 -->
+			        <TextView
+				        android:id="@+id/card_bottom_operate_separation"
+				        android:layout_width="match_parent"
+				        android:layout_height="1dp"
+				        android:background="#e7e7e7" />
+
+			        <ImageView
+			            android:id="@+id/card_bottom_operate_chart"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentLeft="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="18dp"/>
+			        
+			        <ImageView
+			            android:id="@+id/card_bottom_operate_delete"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentLeft="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="18dp"/>
+
+			        <ImageView
+			            android:id="@+id/card_bottom_operate_comment"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentLeft="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="103dp"
+			            android:src="@drawable/card_bottom_operate_comment" />
+			        
+			        <ImageView
+			            android:id="@+id/card_bottom_operate_forward"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentLeft="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="188dp"
+			            android:src="@drawable/card_bottom_operate_forward" />
+			        
+			        <ImageView
+			            android:id="@+id/card_bottom_operate_praise"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentLeft="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="273dp"/>
+			        
+			        <ImageView
+			            android:id="@+id/card_bottom_operate_praise_red"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentLeft="true"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="273dp"/>
+
+			        <TextView
+			            android:id="@+id/card_bottom_text_hello"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="5dp"
+			            android:layout_toRightOf="@+id/card_bottom_operate_chart"
+			            android:textColor="#929292"
+			            android:textSize="12sp"
+			            android:typeface="sans" />
+			        
+			        <TextView
+			            android:id="@+id/card_bottom_text_delete"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="5dp"
+			            android:layout_toRightOf="@+id/card_bottom_operate_delete"
+			            android:textColor="#929292"
+			            android:textSize="12sp"
+			            android:typeface="sans" />
+			        
+			        <TextView
+			            android:id="@+id/card_bottom_text_comment"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="5dp"
+			            android:layout_toRightOf="@+id/card_bottom_operate_comment"
+			            android:textColor="#929292"
+			            android:textSize="12sp"
+			            android:typeface="sans" />
+			        
+			        <TextView
+			            android:id="@+id/card_bottom_text_forward"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="5dp"
+			            android:layout_toRightOf="@+id/card_bottom_operate_forward"
+			            android:textColor="#929292"
+			            android:textSize="12sp"
+			            android:typeface="sans" />
+			        
+			        <TextView
+			            android:id="@+id/card_bottom_text_praise"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="5dp"
+			            android:layout_toRightOf="@+id/card_bottom_operate_praise"
+			            android:textColor="#929292"
+			            android:textSize="12sp"
+			            android:typeface="sans" />
+		        
+		        </RelativeLayout>
+		        
+		        
+       
+   		</RelativeLayout>
+        
+ 	</android.support.v7.widget.CardView>
+</RelativeLayout>

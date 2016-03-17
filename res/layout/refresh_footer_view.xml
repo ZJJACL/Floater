@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.lee.floater"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout 
+    	android:layout_width="match_parent"
+    	android:layout_height="48dp" >
+    
+	    <TextView
+	        android:id="@+id/fresh_footer_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical ="true"
+	        android:layout_alignParentLeft ="true"
+	        android:layout_marginLeft ="150dp"
+	        android:text="上拉加载更多"
+	        android:textColor="#333333"
+	        android:textSize="14sp"
+	        android:typeface="sans" />
+	    
+	    <com.lee.floater.support.GifMovieView
+	        android:id="@+id/loading_circle_gif"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentLeft ="true"
+	        android:layout_marginLeft ="130dp"
+	        custom:gif="@drawable/loading_circle"/>
+	    
+    </RelativeLayout>
+
+</RelativeLayout>
