@@ -33,7 +33,7 @@ public class RecommendPageHandler {
 	Context context;//将Main传进来
 	public View find_recommend_view; //推荐页面的主View
 	public View find_recommend_page_head;//推荐页面的头部View(Banner/10条推荐话题)
-	
+	public String n=null;
 	public ViewPager bannerViewPager; // Banner的ViewPager
 	public RecyclerView my_follow_topic_recyclerView;//我关注的话题的RecyclerView
 	
