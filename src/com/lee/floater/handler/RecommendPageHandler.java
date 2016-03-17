@@ -26,7 +26,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
- * 集中处理首页_推荐页面中的事务
+ *www 集中处理首页_推荐页面中的事务
  */
 public class RecommendPageHandler {
 	
