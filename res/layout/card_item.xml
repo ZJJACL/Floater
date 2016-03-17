@@ -42,7 +42,7 @@
 			            android:layout_marginBottom="28dp"
 			            android:layout_marginLeft="72dp"
 			            android:textColor="#2fb9c3"
-			            android:textSize="14sp"
+			            android:textSize="14dp"
 			            android:typeface="sans" />
 		
 		            <TextView
@@ -53,7 +53,7 @@
 		                android:layout_alignParentBottom="true"
 			            android:layout_marginBottom="10dp"
 		                android:textColor="#828282"
-		                android:textSize="11sp"
+		                android:textSize="11dp"
 		                android:typeface="sans" />
 		            
 		            <TextView
@@ -65,7 +65,7 @@
 			            android:layout_marginBottom="28dp"
 			            android:layout_marginRight="16dp"
 		                android:textColor="#828282"
-		                android:textSize="11sp"
+		                android:textSize="11dp"
 		                android:typeface="sans" />
 		            
 		            
@@ -94,7 +94,7 @@
 		                android:layout_marginTop="8dp"
 		                android:lineSpacingExtra="4dp"
 		                android:textColor="#333333"
-		                android:textSize="16sp"
+		                android:textSize="16dp"
 		                android:typeface="sans" /> 
 		            
 		            <TextView
@@ -105,7 +105,7 @@
 		                android:layout_marginTop="8dp"
 		                android:layout_alignLeft ="@id/card_text_content"
 		                android:textColor="#2fb9c3"
-		                android:textSize="14sp"
+		                android:textSize="14dp"
 		                android:typeface="sans" />
 		            
 		            <TextView
@@ -116,7 +116,7 @@
 		                android:layout_marginTop="8dp"
 		                android:layout_alignLeft ="@id/card_text_content"
 		                android:textColor="#2fb9c3"
-		                android:textSize="14sp"
+		                android:textSize="14dp"
 		                android:typeface="sans" />
 		            
 		        </RelativeLayout>
@@ -195,7 +195,7 @@
 			            android:layout_marginLeft="5dp"
 			            android:layout_toRightOf="@+id/card_bottom_operate_chart"
 			            android:textColor="#929292"
-			            android:textSize="12sp"
+			            android:textSize="12dp"
 			            android:typeface="sans" />
 			        
 			        <TextView
@@ -206,7 +206,7 @@
 			            android:layout_marginLeft="5dp"
 			            android:layout_toRightOf="@+id/card_bottom_operate_delete"
 			            android:textColor="#929292"
-			            android:textSize="12sp"
+			            android:textSize="12dp"
 			            android:typeface="sans" />
 			        
 			        <TextView
@@ -217,7 +217,7 @@
 			            android:layout_marginLeft="5dp"
 			            android:layout_toRightOf="@+id/card_bottom_operate_comment"
 			            android:textColor="#929292"
-			            android:textSize="12sp"
+			            android:textSize="12dp"
 			            android:typeface="sans" />
 			        
 			        <TextView
@@ -228,7 +228,7 @@
 			            android:layout_marginLeft="5dp"
 			            android:layout_toRightOf="@+id/card_bottom_operate_forward"
 			            android:textColor="#929292"
-			            android:textSize="12sp"
+			            android:textSize="12dp"
 			            android:typeface="sans" />
 			        
 			        <TextView
@@ -239,7 +239,7 @@
 			            android:layout_marginLeft="5dp"
 			            android:layout_toRightOf="@+id/card_bottom_operate_praise"
 			            android:textColor="#929292"
-			            android:textSize="12sp"
+			            android:textSize="12dp"
 			            android:typeface="sans" />
 		        
 		        </RelativeLayout>

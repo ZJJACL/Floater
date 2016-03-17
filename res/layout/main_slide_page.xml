@@ -54,7 +54,7 @@
             android:layout_marginLeft="118dp"
             android:text="推荐"
             android:textColor="#66d7e5"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:typeface="sans" />
         
         <TextView
@@ -66,7 +66,7 @@
             android:layout_marginRight="118dp"
             android:text="分类"
             android:textColor="#66d7e5"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:typeface="sans" />
         
         <TextView
@@ -76,7 +76,7 @@
             android:layout_centerInParent="true"
             android:text="关注"
             android:textColor="#ffffff"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:typeface="sans" />
         
         <TextView
@@ -86,7 +86,7 @@
             android:layout_centerInParent="true"
             android:text="消息"
             android:textColor="#ffffff"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:typeface="sans" />
         
         <TextView
@@ -96,7 +96,7 @@
             android:layout_centerInParent="true"
             android:text="Mine"
             android:textColor="#ffffff"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:typeface="sans" />
 
     </RelativeLayout>
@@ -140,7 +140,7 @@
             android:layout_marginLeft="34dp"
             android:text="发现"
             android:textColor="#333333"
-            android:textSize="10sp"
+            android:textSize="10dp"
             android:typeface="sans" />
 		 
         <ImageView
@@ -170,7 +170,7 @@
             android:layout_marginLeft="125dp"
             android:text="关注"
             android:textColor="#333333"
-            android:textSize="10sp"
+            android:textSize="10dp"
             android:typeface="sans" />
 		
         <ImageView
@@ -200,7 +200,7 @@
             android:layout_marginLeft="215dp"
             android:text="消息"
             android:textColor="#333333"
-            android:textSize="10sp"
+            android:textSize="10dp"
             android:typeface="sans" />
 
         <ImageView
@@ -230,7 +230,7 @@
             android:layout_marginLeft="310dp"
             android:text="我"
             android:textColor="#333333"
-            android:textSize="10sp"
+            android:textSize="10dp"
             android:typeface="sans" />
 
     </RelativeLayout>

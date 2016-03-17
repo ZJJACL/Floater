@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:text="鲁迅美术学院"
             android:textColor="#ffffff"
-            android:textSize="12sp"
+            android:textSize="12dp"
             android:typeface="sans" />
             
             <ImageView
@@ -78,7 +78,7 @@
             android:layout_toRightOf="@+id/topic_main_page_back_icon"
             android:text="还记得你们约定的纪念日吗"
             android:textColor="#ffffff"
-            android:textSize="17sp"
+            android:textSize="17dp"
             android:typeface="sans" />
 
         <ImageView

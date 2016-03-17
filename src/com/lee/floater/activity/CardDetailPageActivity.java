@@ -3,20 +3,15 @@ package com.lee.floater.activity;
 import java.util.ArrayList;
 
 import com.lee.floater.R;
-import com.lee.floater.activity.TopicMainPageActivity.TopicMainPageOnScrollListener;
-import com.lee.floater.adapters.CardListAdapter;
 import com.lee.floater.adapters.CommentListAdapter;
-import com.lee.floater.items.Card_Item;
 import com.lee.floater.items.Comment_Item;
 import com.lee.floater.support.SystemBarTintManager;
-
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.Window;
 
 /**

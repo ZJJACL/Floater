@@ -38,7 +38,7 @@
             android:layout_toRightOf="@+id/search_icon"
             android:text="点此搜索话题"
             android:textColor="#848484"
-            android:textSize="14sp"
+            android:textSize="14dp"
             android:typeface="sans" />
     </RelativeLayout>
 
@@ -67,7 +67,7 @@
 	        android:layout_marginLeft ="40dp"
 	        android:text="图文"
 	        android:textColor="#676767"
-	        android:textSize="14sp"
+	        android:textSize="14dp"
 	        android:typeface="sans" />
 
         <ImageView
@@ -87,7 +87,7 @@
 	        android:layout_marginLeft ="124dp"
 	        android:text="录音"
 	        android:textColor="#676767"
-	        android:textSize="14sp"
+	        android:textSize="14dp"
 	        android:typeface="sans" />
 
         <ImageView
@@ -107,7 +107,7 @@
 	        android:layout_marginLeft ="207dp"
 	        android:text="视频"
 	        android:textColor="#676767"
-	        android:textSize="14sp"
+	        android:textSize="14dp"
 	        android:typeface="sans" />
 
         <ImageView
@@ -127,7 +127,7 @@
 	        android:layout_marginLeft ="291dp"
 	        android:text="音乐"
 	        android:textColor="#676767"
-	        android:textSize="14sp"
+	        android:textSize="14dp"
 	        android:typeface="sans" />
         
     </RelativeLayout>
@@ -152,7 +152,7 @@
             android:layout_marginLeft="16dp"
             android:text="全部话题（32692）"
             android:textColor="#ffffff"
-            android:textSize="16sp"
+            android:textSize="16dp"
             android:typeface="sans" />
 
         <ImageView

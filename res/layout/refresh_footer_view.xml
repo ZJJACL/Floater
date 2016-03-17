@@ -18,7 +18,7 @@
 	        android:layout_marginLeft ="150dp"
 	        android:text="上拉加载更多"
 	        android:textColor="#333333"
-	        android:textSize="14sp"
+	        android:textSize="14dp"
 	        android:typeface="sans" />
 	    
 	    <com.lee.floater.support.GifMovieView

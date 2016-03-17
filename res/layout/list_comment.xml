@@ -22,7 +22,7 @@
         android:layout_marginLeft="72dp"
         android:layout_marginTop="15dp"
         android:textColor="#2fb9c3"
-        android:textSize="14sp"
+        android:textSize="14dp"
         android:typeface="sans" />
 
     <TextView
@@ -33,7 +33,7 @@
         android:layout_below="@+id/comment_user_name"
         android:layout_marginTop="4dp"
         android:textColor="#828282"
-        android:textSize="11sp"
+        android:textSize="11dp"
         android:typeface="sans" />
     
     <TextView
@@ -44,7 +44,7 @@
         android:layout_below="@+id/comment_user_university"
         android:layout_marginTop="10dp"
         android:textColor="#333333"
-        android:textSize="14sp"
+        android:textSize="14dp"
         android:typeface="sans" />
     
     <TextView
@@ -56,7 +56,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="20dp"
         android:textColor="#828282"
-        android:textSize="11sp"
+        android:textSize="11dp"
         android:typeface="sans" />
     
     <!-- 模拟的分割线 -->

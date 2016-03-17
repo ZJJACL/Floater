@@ -39,7 +39,7 @@
 	         android:layout_marginTop="144dp"
 	         android:text="努力加载中..."
 	         android:textColor="#333333"
-	         android:textSize="14sp"
+	         android:textSize="14dp"
 	         android:typeface="sans" />
 	     
 	     <com.lee.floater.support.GifMovieView

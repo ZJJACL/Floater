@@ -37,7 +37,7 @@
 		        android:layout_centerHorizontal="true"
 		        android:text="穿上平底鞋去流浪"
 		        android:textColor="#2fb9c3"
-		        android:textSize="17sp"
+		        android:textSize="17dp"
 		        android:typeface="sans" />
 		
 		    <ImageView
@@ -60,7 +60,7 @@
 		android:layout_marginTop="8dp"
 		 android:text="鲁迅美术学院平面设计"
 		 android:textColor="#676767"
-		 android:textSize="15sp"
+		 android:textSize="15dp"
 		 android:typeface="sans" />
     
 	  <RelativeLayout
@@ -84,7 +84,7 @@
 		        android:layout_centerInParent="true"
 		        android:text="编辑"
 		        android:textColor="#878787"
-		        android:textSize="15sp"
+		        android:textSize="15dp"
 		        android:typeface="sans" />
 		    
 		</RelativeLayout>
@@ -115,7 +115,7 @@
 	  	            android:layout_marginTop="34dp"
 	  	            android:text="卡片"
 	  	            android:textColor="#676767"
-	  	            android:textSize="14sp"
+	  	            android:textSize="14dp"
 	  	            android:typeface="sans" />
 	  	        
 	  	        <TextView
@@ -127,7 +127,7 @@
 	  	            android:layout_marginTop="12dp"
 	  	            android:text="38"
 	  	            android:textColor="#626262"
-	  	            android:textSize="14sp"
+	  	            android:textSize="14dp"
 	  	            android:typeface="sans" 
 	  	            android:textStyle="bold"/>
 	  	        
@@ -148,7 +148,7 @@
 	  	            android:layout_marginTop="34dp"
 	  	            android:text="话题"
 	  	            android:textColor="#676767"
-	  	            android:textSize="14sp"
+	  	            android:textSize="14dp"
 	  	            android:typeface="sans" />
 	  	        
 	  	        <TextView
@@ -160,7 +160,7 @@
 	  	            android:layout_marginTop="12dp"
 	  	            android:text="48"
 	  	            android:textColor="#626262"
-	  	            android:textSize="14sp"
+	  	            android:textSize="14dp"
 	  	            android:typeface="sans" 
 	  	            android:textStyle="bold"/>
 	  	        
@@ -181,7 +181,7 @@
 	  	            android:layout_marginTop="34dp"
 	  	            android:text="关注"
 	  	            android:textColor="#676767"
-	  	            android:textSize="14sp"
+	  	            android:textSize="14dp"
 	  	            android:typeface="sans" />
 	  	        
 	  	        <TextView
@@ -193,7 +193,7 @@
 	  	            android:layout_marginTop="12dp"
 	  	            android:text="106"
 	  	            android:textColor="#626262"
-	  	            android:textSize="14sp"
+	  	            android:textSize="14dp"
 	  	            android:typeface="sans" 
 	  	            android:textStyle="bold"/>
 	  	        
@@ -214,7 +214,7 @@
 	  	            android:layout_marginTop="34dp"
 	  	            android:text="粉丝"
 	  	            android:textColor="#676767"
-	  	            android:textSize="14sp"
+	  	            android:textSize="14dp"
 	  	            android:typeface="sans" />
 	  	        
 	  	        <TextView
@@ -226,7 +226,7 @@
 	  	            android:layout_marginTop="12dp"
 	  	            android:text="587"
 	  	            android:textColor="#626262"
-	  	            android:textSize="14sp"
+	  	            android:textSize="14dp"
 	  	            android:typeface="sans" 
 	  	            android:textStyle="bold"/>
 	  	        
