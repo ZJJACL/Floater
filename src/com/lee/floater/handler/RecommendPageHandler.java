@@ -39,7 +39,7 @@ public class RecommendPageHandler {
 	
     //我关注的话题数据List
     public ArrayList<Topic_Item> my_follow_topic_items = new ArrayList<Topic_Item>();
-      public int k=0;
+
     //底部刷新View索引
     public View refresh_footer_view;
     
