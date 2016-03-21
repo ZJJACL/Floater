@@ -52,18 +52,10 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
     
     //下拉刷新的时候调用这个方法
     public void refreshPullDown(ArrayList<T> newDatas){
-    	if(mHeaderView == null){
-    		notifyItemRangeInserted(0, newDatas.size());
-    		mDatas.addAll(0, newDatas);
-    		notifyItemRangeChanged(0, mDatas.size());
-    	}
     	
-    	if(mHeaderView != null){
-    		notifyItemRangeInserted(1, newDatas.size());
-    		mDatas.addAll(0, newDatas);
-    		notifyItemRangeChanged(1, mDatas.size());
-    	}
-    	
+    	mDatas = newDatas;
+    	notifyDataSetChanged();
+
     }
     
     //上拉加载更多的时候调用这个方法

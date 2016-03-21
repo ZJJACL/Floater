@@ -56,7 +56,7 @@ public class CardListAdapter extends BaseRecyclerAdapter<Card_Item> {
 				mViewHolder.card_bottom_text_praise.setText(data.getCardBottomTextPraise());
 			    
 				//为CardView绑定点击监听事件
-				mViewHolder.card_item_view.setOnClickListener(new CardListItemListener(context));
+				mViewHolder.card_item_view.setOnClickListener(new CardListItemListener(context,data));
 				
 				
 			}

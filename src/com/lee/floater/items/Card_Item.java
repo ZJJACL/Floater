@@ -1,5 +1,7 @@
 package com.lee.floater.items;
 
+import java.io.Serializable;
+
 
 /**
  * 每个卡片中包含的内容，由于应用中的卡片类型有很多种
@@ -7,7 +9,7 @@ package com.lee.floater.items;
  * 这个类中，在显示的时候有选择的进行显示
  *
  */
-public class Card_Item {
+public class Card_Item implements Serializable  {
 	
 	int card_user_icon ;//用户头像
 	String card_user_name ; //用户昵称

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <!-- 创建顶部标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/edit_post_topic_title_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/nav_title_frame_single_top_background" >
+
+        <TextView
+            android:id="@+id/edit_post_topic_page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="创建话题"
+            android:textColor="#333333"
+            android:textSize="18dp"
+            android:typeface="sans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="取消"
+            android:textColor="#333333"
+            android:textSize="17dp"
+            android:typeface="sans" />
+
+        <FrameLayout
+            android:id="@+id/submit_topic_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp" >
+
+            <ImageView
+                android:id="@+id/yellow_button_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yellow_button_background" />
+
+            <TextView
+                android:id="@+id/submit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="创建"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:typeface="sans" />
+        </FrameLayout>
+        
+    </RelativeLayout>
+    
+    
+    <!-- 创建话题icon选择的部分 -->
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below ="@id/edit_post_topic_title_bar_layout"
+        android:layout_marginTop="57dp">
+        
+        <ImageView
+            android:id="@+id/selected_topic_icon"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/list_topic_icon" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/selected_topic_icon"
+            android:src="@drawable/right_select_icon_arrow" />
+    
+        </RelativeLayout>
+        
+    <!-- 构建话题名输入框 -->
+    
+    
+    
+    
+    
+
+</RelativeLayout>

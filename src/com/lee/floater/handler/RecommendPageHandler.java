@@ -20,20 +20,21 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
- *www 集中处理首页_推荐页面中的事务aaaaa
+ *集中处理首页_推荐页面中的事务
  */
 public class RecommendPageHandler {
 	
 	Context context;//将Main传进来
 	public View find_recommend_view; //推荐页面的主View
 	public View find_recommend_page_head;//推荐页面的头部View(Banner/10条推荐话题)
-	public String n=null;
+	
 	public ViewPager bannerViewPager; // Banner的ViewPager
 	public RecyclerView my_follow_topic_recyclerView;//我关注的话题的RecyclerView
 	
@@ -73,6 +74,7 @@ public class RecommendPageHandler {
         //加载Banner的ViewPage
         bannerViewPager=
         		(ViewPager)find_recommend_page_head.findViewById(R.id.banner_view_pager);
+        
         
      	//加载为我关注的话题编写的RecyclerView
         my_follow_topic_recyclerView =
@@ -148,43 +150,20 @@ public class RecommendPageHandler {
 	 */
 	public void loadEverydayTopicItems(){
 		//每日推荐10条
-		RelativeLayout Item_1 = 
-				(RelativeLayout)find_recommend_page_head.findViewById(R.id.recommend_topic_1);
-		RelativeLayout Item_2 = 
-				(RelativeLayout)find_recommend_page_head.findViewById(R.id.recommend_topic_2);
-		RelativeLayout Item_3 = 
-				(RelativeLayout)find_recommend_page_head.findViewById(R.id.recommend_topic_3);
-		RelativeLayout Item_4 = 
-				(RelativeLayout)find_recommend_page_head.findViewById(R.id.recommend_topic_4);
-		RelativeLayout Item_5 = 
-				(RelativeLayout)find_recommend_page_head.findViewById(R.id.recommend_topic_5);
-		RelativeLayout Item_6 = 
-				(RelativeLayout)find_recommend_page_head.findViewById(R.id.recommend_topic_6);
-		RelativeLayout Item_7 = 
-				(RelativeLayout)find_recommend_page_head.findViewById(R.id.recommend_topic_7);
-		RelativeLayout Item_8 = 
-				(RelativeLayout)find_recommend_page_head.findViewById(R.id.recommend_topic_8);
-		RelativeLayout Item_9 = 
-				(RelativeLayout)find_recommend_page_head.findViewById(R.id.recommend_topic_9);
-		RelativeLayout Item_10 = 
-				(RelativeLayout)find_recommend_page_head.findViewById(R.id.recommend_topic_10);
+		LinearLayout contentLayout=(LinearLayout) find_recommend_page_head.findViewById(R.id.recommend_topic_list_layout);
+		LayoutInflater inflater = LayoutInflater.from(context);
 		
-		ArrayList<RelativeLayout> Item_List = new ArrayList<RelativeLayout>();
-		Item_List.add(Item_1);
-		Item_List.add(Item_2);
-		Item_List.add(Item_3);
-		Item_List.add(Item_4);
-		Item_List.add(Item_5);
-		Item_List.add(Item_6);
-		Item_List.add(Item_7);
-		Item_List.add(Item_8);
-		Item_List.add(Item_9);
-		Item_List.add(Item_10);
 		for(int i=0 ; i<10;i++){
-			((ImageView)(Item_List.get(i).getChildAt(0))).setImageResource(R.drawable.list_topic_icon);
-			((TextView)(Item_List.get(i).getChildAt(1))).setText("我为室友来征婚");
-			((TextView)(Item_List.get(i).getChildAt(2))).setText("已制造208个卡片");
-			((ImageView)(Item_List.get(i).getChildAt(3))).setImageResource(R.drawable.list_topic_category_video);
+			
+			//将话题列表中单独的一项装载为View
+			View topic_view = inflater.inflate(R.layout.list_topic,null);
+			
+			((ImageView) topic_view.findViewById(R.id.list_topic_icon)).setImageResource(R.drawable.list_topic_icon);
+			((TextView)topic_view.findViewById(R.id.list_topic_title)).setText("我为室友来征婚");
+			((TextView)topic_view.findViewById(R.id.list_topic_content_number)).setText("已制造208个卡片");
+			((ImageView)topic_view.findViewById(R.id.list_topic_category_icon)).setImageResource(R.drawable.list_topic_category_video);
+			
+			contentLayout.addView(topic_view);
 		}
 	}
 	

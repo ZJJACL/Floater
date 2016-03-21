@@ -22,6 +22,7 @@
         android:layout_height="34dp"
 		android:layout_alignParentTop = "true"
 		android:layout_marginTop ="47dp" 
+		android:clickable="true"
         android:background="@drawable/nav_title_frame_background" >
         
         <RelativeLayout

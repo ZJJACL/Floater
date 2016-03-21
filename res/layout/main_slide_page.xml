@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context="com.lee.floater.activity.Main" 
-    android:fitsSystemWindows="true">
-    
-   <!-- 加载ViewPaper，以实现手势侧滑 -->
+    android:fitsSystemWindows="true"
+    tools:context="com.lee.floater.activity.Main" >
+
+    <!-- 加载ViewPaper，以实现手势侧滑 -->
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPaper"
@@ -14,10 +14,10 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/button_nav_find"
         android:layout_below="@+id/button_title_post" >
-
     </android.support.v4.view.ViewPager>
-    
+
     <!-- 标题栏的创建 -->
+
     <RelativeLayout
         android:id="@+id/relativeLayout_title"
         android:layout_width="match_parent"
@@ -26,15 +26,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/nav_title_frame_background" >
-
-        <ImageView
-            android:id="@+id/post_topic_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:src="@drawable/post_topic" />
 
         <ImageView
             android:id="@+id/audio_icon"
@@ -56,7 +47,7 @@
             android:textColor="#66d7e5"
             android:textSize="18dp"
             android:typeface="sans" />
-        
+
         <TextView
             android:id="@+id/title_category"
             android:layout_width="wrap_content"
@@ -68,7 +59,7 @@
             android:textColor="#66d7e5"
             android:textSize="18dp"
             android:typeface="sans" />
-        
+
         <TextView
             android:id="@+id/title_follow"
             android:layout_width="wrap_content"
@@ -78,7 +69,7 @@
             android:textColor="#ffffff"
             android:textSize="18dp"
             android:typeface="sans" />
-        
+
         <TextView
             android:id="@+id/title_message"
             android:layout_width="wrap_content"
@@ -88,7 +79,7 @@
             android:textColor="#ffffff"
             android:textSize="18dp"
             android:typeface="sans" />
-        
+
         <TextView
             android:id="@+id/title_mine"
             android:layout_width="wrap_content"
@@ -98,10 +89,8 @@
             android:textColor="#ffffff"
             android:textSize="18dp"
             android:typeface="sans" />
-
     </RelativeLayout>
-    
-    
+
     <!-- 底部导航栏的创建 -->
 
     <RelativeLayout
@@ -112,7 +101,7 @@
         android:layout_alignParentLeft="true"
         android:background="@drawable/nav_bottom_frame_background"
         android:gravity="bottom" >
-		
+
         <ImageView
             android:id="@+id/find_nav_icon_notice"
             android:layout_width="wrap_content"
@@ -121,7 +110,7 @@
             android:layout_marginBottom="19dp"
             android:layout_marginLeft="29dp"
             android:src="@drawable/find_nav_icon_notice" />
-        
+
         <ImageView
             android:id="@+id/find_nav_icon"
             android:layout_width="wrap_content"
@@ -129,20 +118,20 @@
             android:layout_alignParentLeft="true"
             android:layout_marginBottom="19dp"
             android:layout_marginLeft="29dp"
-            android:src="@drawable/find_nav_icon" /> 
-        
+            android:src="@drawable/find_nav_icon" />
+
         <TextView
             android:id="@+id/nav_find"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_marginTop="25dp"
             android:layout_marginLeft="34dp"
+            android:layout_marginTop="25dp"
             android:text="发现"
             android:textColor="#333333"
             android:textSize="10dp"
             android:typeface="sans" />
-		 
+
         <ImageView
             android:id="@+id/follow_nav_icon_notice"
             android:layout_width="wrap_content"
@@ -150,8 +139,8 @@
             android:layout_alignParentLeft="true"
             android:layout_marginBottom="19dp"
             android:layout_marginLeft="121dp"
-            android:src="@drawable/follow_nav_icon_notice" /> 
-        
+            android:src="@drawable/follow_nav_icon_notice" />
+
         <ImageView
             android:id="@+id/follow_nav_icon"
             android:layout_width="wrap_content"
@@ -160,19 +149,19 @@
             android:layout_marginBottom="19dp"
             android:layout_marginLeft="121dp"
             android:src="@drawable/follow_nav_icon" />
-        
+
         <TextView
             android:id="@+id/nav_follow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_marginTop="25dp"
             android:layout_marginLeft="125dp"
+            android:layout_marginTop="25dp"
             android:text="关注"
             android:textColor="#333333"
             android:textSize="10dp"
             android:typeface="sans" />
-		
+
         <ImageView
             android:id="@+id/mine_nav_icon_notice"
             android:layout_width="wrap_content"
@@ -181,7 +170,7 @@
             android:layout_marginBottom="19dp"
             android:layout_marginRight="36dp"
             android:src="@drawable/mine_nav_icon_notice" />
-        
+
         <ImageView
             android:id="@+id/mine_nav_icon"
             android:layout_width="wrap_content"
@@ -190,14 +179,14 @@
             android:layout_marginBottom="19dp"
             android:layout_marginRight="36dp"
             android:src="@drawable/mine_nav_icon" />
-        
+
         <TextView
             android:id="@+id/nav_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_marginTop="25dp"
             android:layout_marginLeft="214dp"
+            android:layout_marginTop="25dp"
             android:text="消息"
             android:textColor="#333333"
             android:textSize="10dp"
@@ -211,7 +200,7 @@
             android:layout_marginBottom="19dp"
             android:layout_marginRight="124dp"
             android:src="@drawable/message_nav_icon_notice" />
-        
+
         <ImageView
             android:id="@+id/message_nav_icon"
             android:layout_width="wrap_content"
@@ -220,29 +209,21 @@
             android:layout_marginBottom="19dp"
             android:layout_marginRight="124dp"
             android:src="@drawable/message_nav_icon" />
-        
+
         <TextView
             android:id="@+id/nav_mine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_marginTop="25dp"
             android:layout_marginLeft="310dp"
+            android:layout_marginTop="25dp"
             android:text="我"
             android:textColor="#333333"
             android:textSize="10dp"
             android:typeface="sans" />
-
     </RelativeLayout>
-    
-	<!-- 为顶部标题栏中的各个可点击元素覆盖热区 -->
-    <Button
-        android:id="@+id/button_title_post"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="#00000000" />
+
+    <!-- 为顶部标题栏中的各个可点击元素覆盖热区 -->
 
     <Button
         android:id="@+id/button_title_audio"
@@ -268,7 +249,7 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/button_title_recommend"
         android:background="#00000000" />
-    
+
     <!-- 为底部导航栏中的各个可点击元素覆盖热区 -->
 
     <Button
@@ -278,7 +259,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:background="#00000000" />
-    
+
     <Button
         android:id="@+id/button_nav_follow"
         android:layout_width="90dp"
@@ -302,5 +283,141 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="#00000000" />
+
+     <!-- 在此处插入扩散背景控件，背景设为透明 -->
+     <com.lee.floater.reveal.RevealColorView 
+	     android:id="@+id/full_screen_reveal" 
+	     android:layout_width="match_parent" 
+	     android:layout_height="match_parent" 
+	     android:background="#00000000"/> 
+
+    <com.lee.floater.support.RotateImageView
+        android:id="@+id/button_title_post"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/post_topic" />
+
+    <!-- 创建发布话题页面中的所有控件-->
+
+    <RelativeLayout
+        android:id="@+id/post_topic_page_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 将4个圆形分类图片封装到一个RelativeLayout布局中 -->
+
+        <RelativeLayout
+            android:id="@+id/post_topic_page_category_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="238dp" >
+
+            <ImageView
+                android:id="@+id/post_topic_page_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/topic_category_picture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/post_topic_page_picture"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
+                android:text="图文"
+                android:textColor="#555555"
+                android:textSize="14dp"
+                android:typeface="sans" />
+
+            <ImageView
+                android:id="@+id/post_topic_page_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/post_topic_page_picture"
+                android:src="@drawable/topic_category_audio" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/post_topic_page_audio"
+                android:layout_marginLeft="124dp"
+                android:layout_marginTop="5dp"
+                android:text="录音"
+                android:textColor="#555555"
+                android:textSize="14dp"
+                android:typeface="sans" />
+
+            <ImageView
+                android:id="@+id/post_topic_page_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/post_topic_page_audio"
+                android:src="@drawable/topic_category_video" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/post_topic_page_audio"
+                android:layout_marginLeft="207dp"
+                android:layout_marginTop="5dp"
+                android:text="视频"
+                android:textColor="#555555"
+                android:textSize="14dp"
+                android:typeface="sans" />
+
+            <ImageView
+                android:id="@+id/post_topic_page_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/post_topic_page_video"
+                android:src="@drawable/topic_category_music" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/post_topic_page_audio"
+                android:layout_marginLeft="291dp"
+                android:layout_marginTop="5dp"
+                android:text="音乐"
+                android:textColor="#555555"
+                android:textSize="14dp"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="117dp"
+            android:text="请选择话题类型"
+            android:textColor="#555555"
+            android:textSize="18dp"
+            android:typeface="sans" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="155dp"
+            android:text="每日仅可以创建两个话题"
+            android:textColor="#555555"
+            android:textSize="18dp"
+            android:typeface="sans" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

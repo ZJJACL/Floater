@@ -1,12 +1,14 @@
 package com.lee.floater.items;
 
+import java.io.Serializable;
+
 /**
  * 
  * 每一个话题都包含着相同类别的元素
  *此处只列出了话题列表中的几个元素，其他元素可以后添加
  *
  */
-public class Topic_Item {
+public class Topic_Item implements Serializable {
 	
 	public  int topic_icon ;//话题icon
 	public String topic_title;//话题名

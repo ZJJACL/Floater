@@ -8,9 +8,12 @@ import com.lee.floater.handler.FindCategoryPageHandler;
 import com.lee.floater.handler.FollowMainPageHandler;
 import com.lee.floater.handler.MineMainPageHandler;
 import com.lee.floater.handler.RecommendPageHandler;
+import com.lee.floater.support.RotateImageView;
 import com.lee.floater.support.SystemBarTintManager;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -19,9 +22,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import com.lee.floater.reveal.RevealColorView;
+
 
 
 public class Main extends Activity implements OnPageChangeListener,OnClickListener  {
@@ -40,6 +48,12 @@ public class Main extends Activity implements OnPageChangeListener,OnClickListen
     public View follow_main_view;
     public View message_main_view;
     public View mine_main_view;
+    
+    //话题发布页面的扩散背景RevealColorView
+    static RevealColorView  revealColorView;
+    static boolean isFullScreen = false;
+    //点击发布话题的时候需要对这个页面的显示和消失进行控制
+    static RelativeLayout post_topic_page_main_layout ;
     
     //顶部标题栏各静态元素索引
     TextView title_recommend ;
@@ -66,7 +80,7 @@ public class Main extends Activity implements OnPageChangeListener,OnClickListen
     TextView nav_mine;
     
     //顶部和底部各个可点击热区的索引
-    Button button_title_post;
+    static RotateImageView button_title_post;
     Button button_title_audio;
     Button button_title_recommend;
     Button button_title_category;
@@ -74,6 +88,10 @@ public class Main extends Activity implements OnPageChangeListener,OnClickListen
     Button button_nav_follow;
     Button button_nav_message;
     Button button_nav_mine;
+    
+    //话题发布的全屏页面中的四种类型图片的引用,此处先加载两种类型
+    ImageView post_topic_page_picture_button ;
+    ImageView post_topic_page_audio_button;
 
 
     @Override
@@ -150,7 +168,7 @@ public class Main extends Activity implements OnPageChangeListener,OnClickListen
         mine_nav_icon =(ImageView)findViewById(R.id.mine_nav_icon);
         nav_mine = (TextView)findViewById(R.id.nav_mine);
         
-        button_title_post = (Button)findViewById(R.id.button_title_post);
+        button_title_post = (RotateImageView)findViewById(R.id.button_title_post);
         button_title_audio = (Button)findViewById(R.id.button_title_audio);
         button_title_recommend= (Button)findViewById(R.id.button_title_recommend);
         button_title_category= (Button)findViewById(R.id.button_title_category);
@@ -169,8 +187,22 @@ public class Main extends Activity implements OnPageChangeListener,OnClickListen
         button_nav_message.setOnClickListener(Main.this);
         button_nav_mine.setOnClickListener(Main.this);
 
-      //加载5个主要页面的ViewPage
+        //加载5个主要页面的ViewPage
         viewPager = (ViewPager)findViewById(R.id.viewPaper);
+        
+        //加载话题发布页面的扩散背景
+        revealColorView = (RevealColorView)findViewById(R.id.full_screen_reveal);
+        post_topic_page_main_layout = (RelativeLayout )findViewById(R.id.post_topic_page_main_layout);
+        post_topic_page_main_layout.setVisibility(View.GONE);
+        
+        //加载话题发布全屏页面中的图片按钮
+        post_topic_page_picture_button =(ImageView)findViewById(R.id.post_topic_page_picture);
+        post_topic_page_audio_button=(ImageView)findViewById(R.id.post_topic_page_audio);
+        
+        
+        //为全屏发布页面中的各种类型的发布按钮添加点击事件监听器
+        post_topic_page_picture_button.setOnClickListener(Main.this);
+        post_topic_page_audio_button.setOnClickListener(Main.this);
         
     }
     
@@ -344,10 +376,21 @@ public class Main extends Activity implements OnPageChangeListener,OnClickListen
 	 */
 	@Override
 	public void onClick(View v) {
+		
+		Intent intent = new Intent( Main.this, EditAndPostTopicPageActivity.class);
+		
 		switch (v.getId()) {
         	case R.id.button_title_post:
-        		//TODO
-        		break;
+
+        		if(isFullScreen){
+        			hideFullPage();
+        			break;
+        		}
+        		
+        		if(!isFullScreen){
+        			revealFullPage();
+        			break;
+        		}
 
         	case R.id.button_title_audio:
         		//TODO
@@ -388,9 +431,92 @@ public class Main extends Activity implements OnPageChangeListener,OnClickListen
         		setCurrentPage(4);
         		changeNavForSlide_4();
         		break;
+
+        	//四种类型的话题发布按钮	
+        	case R.id.post_topic_page_picture:
+        		intent.putExtra("topic_category", "图文");
+        		startActivity(intent);
+        		break;
+        	
+        	case R.id.post_topic_page_audio:
+        		intent.putExtra("topic_category", "音频");
+        		startActivity(intent);
+        		break;	
+        		
         	}
 
      }
+	
+	/**
+	 * 获得某个控件的中心位置
+	 * @param src
+	 * @param target
+	 * @return
+	 */
+	private Point getLocationInView(View src, View target) { 
+		final int[] l0 = new int[2]; 
+		src.getLocationOnScreen(l0); 
+
+		final int[] l1 = new int[2]; 
+		target.getLocationOnScreen(l1); 
+
+		l1[0] = l1[0] - l0[0] + target.getWidth() / 2; 
+		l1[1] = l1[1] - l0[1] + target.getHeight() / 2; 
+
+		return new Point(l1[0], l1[1]); 
+	} 
+
+	/**
+	 * 打开话题发布页面，展现扩散动效
+	 */
+	public void revealFullPage(){
+		
+		//背景纯色的展开
+		final Point p = getLocationInView(revealColorView, button_title_post);
+		int color = Color.parseColor("#00bcd4");
+		button_title_post.setOrientation(-45,true);
+		revealColorView.reveal(p.x, p.y/4, color, button_title_post.getHeight() / 2, 340, null);
+		isFullScreen = true;
+		revealColorView.setClickable(true);
+		
+		//发布话题页面中的内容的出现动画
+		TranslateAnimation mShowAction = 
+				new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f,     
+				Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,     
+				-1.0f, Animation.RELATIVE_TO_SELF, 0.0f);     
+				mShowAction.setDuration(250);   
+				
+		post_topic_page_main_layout.startAnimation(mShowAction);     
+		post_topic_page_main_layout.setVisibility(View.VISIBLE);  
+
+	}
+	
+	
+	/**
+	 * 收起话题发布页面，展现收起动效
+	 */
+	public void hideFullPage(){
+		
+		//背景纯色的收起
+		final Point p = getLocationInView(revealColorView, button_title_post);
+		int color = Color.parseColor("#00000000");
+		button_title_post.setOrientation(0,true);
+		revealColorView.hide(p.x, p.y/4, color, 0, 300, null);
+		isFullScreen = false;
+		revealColorView.setClickable(false);
+		
+		//发布话题页面中的内容的消失动画
+		TranslateAnimation mHiddenAction = 
+				new TranslateAnimation(Animation.RELATIVE_TO_SELF,     
+				0.0f, Animation.RELATIVE_TO_SELF, 0.0f,     
+				Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,     
+				-1.0f);    
+		mHiddenAction.setDuration(100);     
+
+		post_topic_page_main_layout.startAnimation(mHiddenAction);     
+		post_topic_page_main_layout.setVisibility(View.GONE);   
+
+	}
 	
 }
 
